@@ -1,0 +1,298 @@
+<html>
+
+<head>
+    <link rel="StyleSheet" href="style.css" type="text/css" media="all">
+    <title>RaDe-GS: Rasterizing Depth in Gaussian Splatting</title>
+    <meta property="og:title" content="Efficient Virtual View Selection for 3D Hand Pose Estimation">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+    <br>
+    <div class="center-div">
+        <span style="font-size:40px">RaDe-GS: Rasterizing Depth in Gaussian Splatting
+</span>
+    </div>
+
+    <br>
+    <table align="center" width="900px">
+        <tbody>
+            <tr>
+                <td align="center" width="200px">
+                    <div class="center-div">
+                        <span style="font-size:22px">
+                            Baowen Zhang<sup>1</sup>
+                        </span>
+                    </div>
+                </td>
+
+                <td align="center" width="200px">
+                    <div class="center-div">
+                        <span style="font-size:22px">
+                            Chuan Fang<sup>1</sup>
+                        </span>
+                    </div>
+                </td>
+
+                <td align="center" width="200px">
+                    <div class="center-div">
+                        <span style="font-size:22px">
+                            Rakesh Shrestha<sup>2</sup>
+                        </span>
+                    </div>
+                </td>
+
+                <td align="center" width="180px">
+                    <div class="center-div">
+                        <span style="font-size:22px">
+                            <a href="https://yixunliang.github.io/">Yixun Liang</a><sup>1</sup>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table align="center" width="450px">
+        <tbody>
+            <tr>
+
+                <td align="center" width="150px">
+                    <div class="center-div">
+                        <span style="font-size:22px">
+                            <a href="https://www.xxlong.site/">Xiaoxiao Long</a><sup>3</sup>
+                        </span>
+                    </div>
+                </td>
+
+                <td align="center" width="150px">
+                    <div class="center-div">
+                        <span style="font-size:22px">
+                            <a href="https://ece.hkust.edu.hk/pingtan">Ping Tan</a><sup>1,2</sup>
+                        </span>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <table align="center" width="1000px">
+        <tbody>
+            <tr>
+                <td align="center" width="300px">
+                    <div class="center-div">
+                        <span style="font-size:20px">
+                            <sup>1</sup><a href="https://hkust.edu.hk/">Hong Kong University of Science and Technology</a>
+                        </span>
+                    </div>
+                </td>
+
+
+                <td align="center" width="300px">
+                    <div class="center-div">
+                        <span style="font-size:20px">
+                            <sup>2</sup><a href="https://www.sfu.ca/">Simon Fraser University</a>
+                        </span>
+                    </div>
+                </td>
+
+                <td align="center" width="300px">
+                    <div class="center-div">
+                        <span style="font-size:20px">
+                            <sup>3</sup><a href="https://www.hku.hk/">The University of Hong Kong</a>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <br>
+    <table align="center" width="1000px">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <img src="./resources/teaser.png" width="1000px"></a><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <span style="font-size:22px">
+                            We present a rasterized method to compute the depth and surface normal maps of general Gaussian splats. Our method achieves high-quality 3D shape reconstruction and maintains excellent training and rendering efficiency.
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1>Abstract</h1>
+    </div>
+    <p style="font-size:22px;">
+        Gaussian Splatting (GS) has proven to be highly effective in novel view synthesis, achieving high-quality and real-time rendering. However, its potential for reconstructing detailed 3D shapes has not been fully explored. Existing methods often suffer from limited shape accuracy due to the discrete and unstructured nature of Gaussian splats, which complicates the shape extraction. 
+        While recent techniques like 2D GS have attempted to improve shape reconstruction, they often reformulate the Gaussian primitives in ways that reduce both rendering quality and computational efficiency. 
+        To address these problems, our work introduces a rasterized approach to render the depth maps and surface normal maps of general 3D Gaussian splats. Our method not only significantly enhances shape reconstruction accuracy but also maintains the computational efficiency intrinsic to Gaussian Splatting. Our approach achieves a Chamfer distance error comparable to NeuraLangelo on the DTU dataset and similar training and rendering time as traditional Gaussian Splatting on the Tanks & Temples dataset. Our method is a significant advancement in Gaussian Splatting and can be directly integrated into existing Gaussian Splatting-based methods.
+    </p>
+    <br><br>
+
+
+
+    <hr>
+    <div class="center-div">
+        <h1 id="paper">Paper and Code</h1>
+    </div>
+    <table align="center" width="900px">
+
+        <tbody>
+            <tr>
+                <td>
+                    <img class="layered-paper-big" style="height:175px" src="./resources/page1.png">
+                </td>
+                <td>
+                    <span style="font-size:14pt">B. Zhang, C. Fang, R. Shrestha, Y. Liang, X. Long, P. Tan</span>
+                    <br><br>
+                    <b><span style="display:inline-block;width:600px;font-size:14pt">RaDe-GS: Rasterizing Depth in Gaussian Splatting.</span></b>
+                    <br><br>
+                    <span style="font-size:14pt">Arxiv, 2024.</span>
+                    <br><br>
+                    <span style="font-size:20px">
+                        <a href="">[Paper (coming soon)]</a> 
+			            <a href="">[Code (coming soon)]</a>                        
+                        <a href="">[Bibtex]</a> 
+<!--                        <a href="https://github.com/iscas3dv/handpose-virtualview">[Code]</a> &nbsp; &nbsp;-->
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="code">Results</h1>
+    </div>
+    <div class="center-div">
+	    <table align="center" width="1100px">
+	        <tbody>
+	            <tr>
+                    <td>
+                        <div class="center-div">
+                            <video controls width="250">
+                                <source src="./resources/bonsai_render.mov"/>
+                            </video>
+
+                            <video controls width="250">
+                                <source src="./resources/bonsai_mesh-h264.mp4"/>
+                            </video>
+
+                            <video controls width="250">
+                                <source src="./resources/treehill_render.mov"/>
+                            </video>
+
+                            <video controls width="250">
+                                <source src="./resources/treehill_mesh-h264.mp4"/>
+                            </video>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <video controls width="250">
+                                <source src="./resources/stump_render.mov"/>
+                            </video>
+
+                            <video controls width="250">
+                                <source src="./resources/stump_mesh-h264.mp4"/>
+                            </video>
+
+                            <video controls width="250">
+                                <source src="./resources/lego_render.mov"/>
+                            </video>
+
+                            <video controls width="250">
+                                <source src="./resources/lego_mesh-h264.mp4"/>
+                            </video>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <span style="font-size:22px">
+                             Our method can render RGB images, depth maps, and normal maps from Gaussian splats, and extract meshes by TSDF fusion.
+                             <br></br>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <img class="round" align="center" width="1100px" src="./resources/m360_qual_comparison_nvs.png">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <span style="font-size:22px">
+                            Comparison of our method previsous GS-based method on novel view synthesis.
+                            <br></br>
+                        </span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <div class="center-div" >
+                            <video controls width="800">
+                                <source src="./resources/comparison.mp4"/>
+                            </video>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <span style="font-size:22px">
+                            Comparison of our method previsous GS-based method on shape reconstruction.
+                        </span>
+                    </td>
+                </tr>
+	        </tbody>
+	    </table>
+    </div>
+    
+    
+    <br><br>
+    <hr>
+    <table align="center" width="980px">
+        <tbody>
+            <tr>
+                <td>
+                    <left>
+                        <div class="center-div">
+                            <h1>Acknowledgements</h1>
+                        </div>
+                        <div class="center-div">
+                            The websiteis modified from this <a href="https://yqdch.github.io/DHSP3D/">template</a>.
+                        </div>
+                    </left>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+
+</body>
+
+</html>
