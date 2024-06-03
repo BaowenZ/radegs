@@ -61,7 +61,7 @@
                 <td align="center" width="150px">
                     <div class="center-div">
                         <span style="font-size:22px">
-                            <a href="https://www.xxlong.site/">Xiaoxiao Long</a><sup>2</sup>
+                            <a href="https://www.xxlong.site/">Xiaoxiao Long</a><sup>1</sup>
                         </span>
                     </div>
                 </td>
@@ -127,14 +127,22 @@
     <br><br>
 
     <hr>
-    <div class="center-div">
-        <h1>Abstract</h1>
-    </div>
-    <p style="font-size:22px;">
-        Gaussian Splatting (GS) has proven to be highly effective in novel view synthesis, achieving high-quality and real-time rendering. However, its potential for reconstructing detailed 3D shapes has not been fully explored. Existing methods often suffer from limited shape accuracy due to the discrete and unstructured nature of Gaussian splats, which complicates the shape extraction. 
-        While recent techniques like 2D GS have attempted to improve shape reconstruction, they often reformulate the Gaussian primitives in ways that reduce both rendering quality and computational efficiency. 
-        To address these problems, our work introduces a rasterized approach to render the depth maps and surface normal maps of general 3D Gaussian splats. Our method not only significantly enhances shape reconstruction accuracy but also maintains the computational efficiency intrinsic to Gaussian Splatting. Our approach achieves a Chamfer distance error comparable to NeuraLangelo on the DTU dataset and similar training and rendering time as traditional Gaussian Splatting on the Tanks & Temples dataset. Our method is a significant advancement in Gaussian Splatting and can be directly integrated into existing Gaussian Splatting-based methods.
-    </p>
+    <table align="center" width="1100px">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <h1>Abstract</h1>
+                    </div>
+                    <p style="font-size:22px;">
+                        Gaussian Splatting (GS) has proven to be highly effective in novel view synthesis, achieving high-quality and real-time rendering. However, its potential for reconstructing detailed 3D shapes has not been fully explored. Existing methods often suffer from limited shape accuracy due to the discrete and unstructured nature of Gaussian splats, which complicates the shape extraction. 
+                        While recent techniques like 2D GS have attempted to improve shape reconstruction, they often reformulate the Gaussian primitives in ways that reduce both rendering quality and computational efficiency. 
+                        To address these problems, our work introduces a rasterized approach to render the depth maps and surface normal maps of general 3D Gaussian splats. Our method not only significantly enhances shape reconstruction accuracy but also maintains the computational efficiency intrinsic to Gaussian Splatting. Our approach achieves a Chamfer distance error comparable to NeuraLangelo on the DTU dataset and similar training and rendering time as traditional Gaussian Splatting on the Tanks & Temples dataset. Our method is a significant advancement in Gaussian Splatting and can be directly integrated into existing Gaussian Splatting-based methods.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <br><br>
 
 
@@ -226,22 +234,7 @@
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <div class="center-div">
-                            <img class="round" align="center" width="1100px" src="./resources/m360_qual_comparison_nvs.png">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">
-                        <span style="font-size:22px">
-                            Comparison of our method previsous GS-based method on novel view synthesis.
-                            <br></br>
-                        </span>
-                    </td>
-                </tr>
-                
+
                 <tr>
                     <td>
                         <div class="center-div" >
@@ -258,6 +251,38 @@
                         </span>
                     </td>
                 </tr>
+
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <img class="round" align="center" width="800px" src="./resources/dtu_comparison.png">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <span style="font-size:22px">
+                            Visual comparison of our method and the previous Gaussian-based methods on the DTU dataset.
+                            <br></br>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <img class="round" align="center" width="800px" src="./resources/m360_qual_comparison_nvs.jpeg">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <span style="font-size:22px">
+                            Comparison of our method previsous GS-based method on novel view synthesis.
+                            <br></br>
+                        </span>
+                    </td>
+                </tr>
+                
 	        </tbody>
 	    </table>
     </div>
