@@ -1,0 +1,6 @@
+@article{Zhang2024RADE,
+        author  =   {Baowen Zhang and Chuan Fang and Rakesh Shrestha and Yixun Liang and Xiaoxiao Long and Ping Tan},
+        title     = {RaDe-GS: Rasterizing Depth in Gaussian Splatting},
+        journal =   {arXiv preprint arXiv:2406.01467},
+        year    =   {2024},
+}
